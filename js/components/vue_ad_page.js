@@ -9,7 +9,12 @@ Vue.component('ad-page', {
             />
         </a-layout-header>
         <a-layout-content class="layout-content">
-            
+            <a-carousel autoplay>
+                <div><img src="img/1.jpg" /></div>
+                <div><img src="img/2.jpg" /></div>
+                <div><img src="img/3.jpg" /></div>
+                <div><img src="img/4.jpg" /></div>
+            </a-carousel>
         </a-layout-content>
     </a-layout>
     `

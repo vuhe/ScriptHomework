@@ -1,54 +1,54 @@
 Vue.component('form-page', {
-    data: function () {
-        return {
-            isShow: false,
-            labelCol: { span: 4 },
-            wrapperCol: { span: 14 },
-            other: '',
-            form: {
-                name: '',
-                region: undefined,
-                date1: undefined,
-                type: [],
-                resource: '',
-                desc: '',
-            },
-            rules: {
-                name: [
-                    { required: true, message: '请输入姓名', trigger: 'blur' },
-                ],
-                region: [{ required: true, message: '请选择一个校区', trigger: 'change' }],
-                type: [
-                    {
-                        type: 'array',
-                        required: true,
-                        message: '请至少选择一个',
-                        trigger: 'change',
-                    },
-                ],
-                resource: [
-                    { required: true, message: '请填写身体情况', trigger: 'change' },
-                ],
-            },
-        };
+  data: function () {
+    return {
+      isShow: false,
+      labelCol: { span: 4 },
+      wrapperCol: { span: 14 },
+      other: '',
+      form: {
+        name: '',
+        region: undefined,
+        date1: undefined,
+        type: [],
+        resource: '',
+        desc: '',
+      },
+      rules: {
+        name: [
+          { required: true, message: '请输入姓名', trigger: 'blur' },
+        ],
+        region: [{ required: true, message: '请选择一个校区', trigger: 'change' }],
+        type: [
+          {
+            type: 'array',
+            required: true,
+            message: '请至少选择一个',
+            trigger: 'change',
+          },
+        ],
+        resource: [
+          { required: true, message: '请填写身体情况', trigger: 'change' },
+        ],
+      },
+    };
+  },
+  methods: {
+    onSubmit() {
+      this.$refs.ruleForm.validate(valid => {
+        if (valid) {
+          this.isShow = true
+        } else {
+          console.log('error submit!!');
+          return false;
+        }
+      });
     },
-    methods: {
-        onSubmit() {
-            this.$refs.ruleForm.validate(valid => {
-                if (valid) {
-                    this.isShow = true
-                } else {
-                    console.log('error submit!!');
-                    return false;
-                }
-            });
-        },
-        resetForm() {
-            this.isShow = false
-            this.$refs.ruleForm.resetFields();
-        },
+    resetForm() {
+      this.isShow = false
+      this.$refs.ruleForm.resetFields();
     },
-    template: `
+  },
+  template: `
     <a-layout>
         <a-layout-header style="background: #fff; padding: 0">
             <a-page-header
@@ -133,6 +133,6 @@ Vue.component('form-page', {
       </a-list-item>
     </a-list>
         </a-layout-content>
-    </a-layout>
-    `
+  </a-layout>
+  `
 });

@@ -9,7 +9,12 @@ Vue.component('home-page', {
             />
         </a-layout-header>
         <a-layout-content class="layout-content">
-            
+            <h2>网站介绍</h2>
+            <hr />
+            <p>本网站介绍和CSS以及HTML相关的知识</p>
+            <p>此外还有一个用于实验的form表单测试</p>
+            <p>最后一个页面有插入的广告</p>
+            <p>详细的可以看左边导航栏</p>
         </a-layout-content>
     </a-layout>
     `

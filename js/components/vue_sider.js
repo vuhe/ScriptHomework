@@ -4,7 +4,7 @@ Vue.component('main-sider', {
             pathItem: [
                 {path: '/', icon: 'user', name: '主页'},
                 {path: '/form', icon: 'form', name: '表单测试'},
-                {path: '/test2', icon: 'upload', name: '测试2'},
+                {path: '/ad', icon: 'aliyun', name: '广告推广'},
             ]
         }
     },
