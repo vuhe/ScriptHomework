@@ -1,7 +1,8 @@
 (function() {
     const router = new VueRouter({
         routes: [
-            {path: '/', component: {template: '<div class="container"><h1>welcome!</h1></div>'}}
+            {path: '/', component: Vue.component('home-page')},
+            {path: '/form', component: Vue.component('form-page')}
         ]
     });
     new Vue({

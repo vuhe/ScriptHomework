@@ -1,9 +1,9 @@
-Vue.component('main-header', {
+Vue.component('main-sider', {
     data: function () {
         return {
             pathItem: [
                 {path: '/', icon: 'user', name: '主页'},
-                {path: '/test1', icon: 'video-camera', name: '测试1'},
+                {path: '/form', icon: 'form', name: '表单测试'},
                 {path: '/test2', icon: 'upload', name: '测试2'},
             ]
         }
