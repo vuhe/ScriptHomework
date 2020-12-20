@@ -15,7 +15,7 @@ Vue.component('main-sider', {
     template: `
     <a-layout-sider :trigger="null" collapsible>
         <div class="logo">
-            脚本设计课程作业
+            脚本课程大作业
         </div>
         <a-menu
             theme="dark" mode="inline"
